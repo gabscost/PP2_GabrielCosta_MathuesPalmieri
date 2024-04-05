@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #191919;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+canvas {
+    background-color: #111;
+
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.score--value{
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+.menu-screen{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.game-over{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.final-score{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.btn-play{
+    border: none;
+    border-radius: 700px;
+    padding: 15px  15px 15px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color:#333;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    height: 50px;
+    background-color: #000000;
+}
+
+header nav a{
+    width: 20px;
+    height: 20px;
+    margin-right: 24px;
+    font-family: 'Righteous', cursive;
+    font-size: 24px;
+    text-decoration: none;
+    color:white;  
+
+}
+
+header h1 {
+    margin-left: 24px;
+    font-size: 35px;
+    line-height: 42px;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 24px;
+    text-align: justify;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+

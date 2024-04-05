@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleForms.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="Jogo.html">Jogo</a>
+            <a href="formulario.html">Contato</a>
+            </ul>
+        </nav>
+    </header>
+    <h1>Formulário de Contato</h1>
+    <form id="contactForm" onsubmit="return false;">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Preferências:</label><br>
+        <input type="checkbox" id="graficos" name="preferencias[]" value="Gráficos">
+        <label for="graficos">Gráficos</label><br>
+        <input type="checkbox" id="jogabilidade" name="preferencias[]" value="Jogabilidade">
+        <label for="jogabilidade">Jogabilidade</label><br>
+        <input type="checkbox" id="historia" name="preferencias[]" value="História">
+        <label for="historia">História</label><br>
+        <input type="checkbox" id="multiplayer" name="preferencias[]" value="Multiplayer">
+        <label for="multiplayer">Multiplayer</label><br><br>
+
+        <label>Assunto:</label><br>
+        <input type="radio" id="duvida" name="assunto" value="Dúvida" required>
+        <label for="duvida">Dúvida</label><br>
+        <input type="radio" id="reclamacao" name="assunto" value="Reclamação" required>
+        <label for="reclamacao">Reclamação</label><br>
+        <input type="radio" id="sugestao" name="assunto" value="Sugestão" required>
+        <label for="sugestao">Sugestão</label><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+
+        <button onclick="verificarForm()" class="btn btn-warning">Verificar</button>
+    </form>
+
+    <div id="dadosVerificados" style="display: none;">
+        <h2>Dados Verificados:</h2>
+        <p><strong>Nome:</strong> <span id="verNome"></span></p>
+        <p><strong>E-mail:</strong> <span id="verEmail"></span></p>
+        <p><strong>Mensagem:</strong> <span id="verMensagem"></span></p>
+        <p><strong>Assunto:</strong> <span id="verAssunto"></span></p>
+        <p><strong>Preferências:</strong> <span id="verPreferencias"></span></p>
+        <button onclick="limparForm()" class="btn btn-danger">Limpar</button>
+        <button onclick="alterarForm()" class="btn btn-warning">Alterar</button>
+        <button onclick="enviarForm()" class="btn btn-success">Enviar</button>
+    </div>
+    <footer>
+        <p>
+            Telefone: (34) 1234-5678<br>
+            Desenvolvido por: Gabriel Costa & Matheus Palmieri<br>
+            © 2024 PiUfu. Todos os direitos reservados.<br>
+        </p>
+    </footer>
+    <script src="scriptForms.js"></script>
+</body>
+
+</html>
